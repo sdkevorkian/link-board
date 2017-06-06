@@ -1,0 +1,11 @@
+<h1>Home</h1>
+
+<%= link_to "Sign up", "/signup", class: "btn btn-primary" %>
+<%= link_to "Login", "/login", class: "btn btn-primary" %>
+
+<div class="well">
+    Current User:
+    <%= @current_user.inspect %>
+</div>
+
+<%= link_to "Logout", "/auth/logout", class: "btn btn-primary" %>
