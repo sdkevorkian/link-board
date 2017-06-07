@@ -1,0 +1,13 @@
+<h1>Your Posts</h1>
+
+
+<ul>
+    <% for post in @posts do%>
+        <li class="well">
+          <p><a href="<%=post.link%>"><%=post.title%></a></p>
+          <p><a href="/posts/<%=post.id%>">view details</a> <a href="/posts/<%=post.id%>/edit">edit</a>
+         </p>
+
+        </li>
+    <%end%>
+</ul>

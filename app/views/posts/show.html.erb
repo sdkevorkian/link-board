@@ -1,0 +1,4 @@
+<h1><%=@post.title%></h1>
+<p>The url is <%=@post.link%></p>
+<p>posted by <%=@post.user.email%></p>
+<%= link_to "delete post", post_path(@post.id), method: :delete, class: 'btn btn-danger' %>

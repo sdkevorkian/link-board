@@ -13,6 +13,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+        <%= yield %>
+    </div>
+    <div class="container">
+        <%= link_to "Home", "/", class: "btn btn-primary" %>
+        <%= link_to "Your Posts", "/posts", class: "btn btn-primary" %>
+        <%= link_to "Make New Posts", "/posts/new", class: "btn btn-primary" %>
+        <% if @current_user %>
+          <%= link_to "Logout", "/auth/logout", class: "btn btn-primary" %>
+        <%else%>
+          <%= link_to "Sign up", "/signup", class: "btn btn-primary" %>
+          <%= link_to "Login", "/login", class: "btn btn-primary" %>
+        <%end%>
+    </div>
   </body>
+
 </html>
